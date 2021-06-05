@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SkeletonUser from '../skeleton/SkeletonUser';
 
 const User = () => {
 
@@ -9,15 +10,15 @@ const User = () => {
     if (user) {
         const { name, phone, email, picture } = user[0];
         const { first, last, title } = name;
-        const { large } = picture;
+        const { large, medium } = picture;
 
         userName = `${title} ${first} ${last}`;
         photo = large;
         userEmail = email;
         phoneNumber = phone;
-        console.log(`Loading Compete...`)
+        console.log(`Loading Compete...`);
     } else {
-        console.log(`Can't Loading...`)
+        console.log(`Can't Loading...`);
     }
 
     useEffect(() => {
@@ -33,20 +34,21 @@ const User = () => {
     return (
         <div className="user">
             <h2>User Info</h2>
-            {user && (
-                <div className="userInfo">
-                    <div>
-                        <img src={photo} alt="" />
-                    </div>
-                    <div className="info">
-                        <h3>{userName}</h3>
-                        <h4>{phoneNumber}</h4>
-                        <p>{userEmail}</p>
-                    </div>
-                </div>
-            )}
 
-            {!user && (<div>Loading... </div>)}
+            {/* {!user && (<div>Loading... </div>)} */}
+            {!user && <SkeletonUser />}
+
+            <div className="userInfo">
+                <div>
+                    <img src={photo} alt="" />
+                </div>
+                <div className="info">
+                    <h3>{userName}</h3>
+                    <h4>{phoneNumber}</h4>
+                    <p>{userEmail}</p>
+                </div>
+            </div>
+
 
         </div>
     );

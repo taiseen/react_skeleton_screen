@@ -27,7 +27,7 @@ h2 {
   margin               : 0 auto;
   padding              : 20px;
   display              : grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.1fr;
   gap                  : 100px;
 }
 
@@ -35,6 +35,7 @@ h2 {
   margin-top     : 10px;
   display        : flex;
   justify-content: space-between;
+  align-items    : center;
 }
 
 .userInfo img {
@@ -42,10 +43,9 @@ h2 {
 }
 
 .userInfo .info {
-  align-self : center;
   line-height: 25px;
 }
 
 .article {
-  margin-bottom: 20px;
+  margin: 20px 0 ;
 }
