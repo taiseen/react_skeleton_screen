@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SkeletonUser from '../skeleton/SkeletonUser';
 
-const User = () => {
+const User = ({ theme }) => {
 
     const [user, setUser] = useState(null);
 
@@ -10,7 +10,7 @@ const User = () => {
     if (user) {
         const { name, phone, email, picture } = user[0];
         const { first, last, title } = name;
-        const { large, medium } = picture;
+        const { large } = picture;
 
         userName = `${title} ${first} ${last}`;
         photo = large;
@@ -36,7 +36,7 @@ const User = () => {
             <h2>User Info</h2>
 
             {/* {!user && (<div>Loading... </div>)} */}
-            {!user && <SkeletonUser theme='dark' />}
+            {!user && <SkeletonUser theme={theme} />}
 
             <div className="userInfo">
                 <div>
@@ -48,8 +48,6 @@ const User = () => {
                     <p>{userEmail}</p>
                 </div>
             </div>
-
-
         </div>
     );
 };

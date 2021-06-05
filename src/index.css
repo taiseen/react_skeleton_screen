@@ -8,12 +8,28 @@
 header {
   background-color: #335cb6;
   padding         : 10px;
+  display         : flex;
+  justify-content : space-between;
 }
 
 header h1 {
-  color    : #fff;
-  max-width: 1200px;
-  margin   : 0 auto;
+  color      : #fff;
+  max-width  : 1200px;
+  margin-left: 20px;
+}
+
+header div {
+  margin-right   : 20px;
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  gap            : 20px;
+}
+
+header div p {
+  font-size  : 25px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 h2 {
@@ -47,5 +63,5 @@ h2 {
 }
 
 .article {
-  margin: 20px 0 ;
+  margin: 20px 0;
 }

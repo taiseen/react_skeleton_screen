@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import SkeletonElement from '../skeleton/SkeletonElement';
 import SkeletonArticle from '../skeleton/SkeletonArticle';
 
-const Articles = () => {
+const Articles = ({ theme }) => {
 
     const [articles, setArticle] = useState(null);
 
@@ -23,7 +22,7 @@ const Articles = () => {
             <h2>Articles</h2>
 
             {/* {!articles && <h1>Loading...</h1>} */}
-            {!articles && [1, 2, 3, 4, 5].map(n => <SkeletonArticle key={n} theme='dark' />)}
+            {!articles && [1, 2, 3, 4, 5].map(n => <SkeletonArticle key={n} theme={theme} />)}
 
             {
                 articles && articles.map(article => {
