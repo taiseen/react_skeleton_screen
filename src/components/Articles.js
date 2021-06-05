@@ -22,10 +22,10 @@ const Articles = ({ theme }) => {
             <h2>Articles</h2>
 
             {/* {!articles && <h1>Loading...</h1>} */}
-            {!articles && [1, 2, 3, 4, 5].map(n => <SkeletonArticle key={n} theme={theme} />)}
+            {!articles && [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => <SkeletonArticle key={n} theme={theme} />)}
 
             {
-                articles && articles.map(article => {
+                articles && articles.slice(0, 15).map(article => {
 
                     const { id, title, body } = article;
 
