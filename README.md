@@ -1,4 +1,4 @@
-# Skeleton Screen | Basic React App | [Live Link](hhhh)
+# React Skeleton Screen | [Live Link](hhhh)
 
 
 ## Topic of Focus:
