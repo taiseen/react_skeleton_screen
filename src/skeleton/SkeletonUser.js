@@ -1,14 +1,21 @@
 import SkeletonElement from './SkeletonElement';
 
-const SkeletonUser = () => {
+const SkeletonUser = ({ theme }) => {
+
+    const themeClass = theme || 'light';
 
     return (
-        <div className="skeleton-wrapper">
-            <div className="skeleton-article">
-                <SkeletonElement type="avatar" />
-                <SkeletonElement type="text" />
-                <SkeletonElement type="text" />
-                <SkeletonElement type="text" />
+        <div className={`skeleton-wrapper ${themeClass}`}>
+            <div className="skeleton-user">
+                <div>
+                    <SkeletonElement type="avatar" />
+                </div>
+
+                <div>
+                    <SkeletonElement type="title" />
+                    <SkeletonElement type="text" />
+                    <SkeletonElement type="text" />
+                </div>
             </div>
         </div>
     );

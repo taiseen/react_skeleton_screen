@@ -36,7 +36,7 @@ const User = () => {
             <h2>User Info</h2>
 
             {/* {!user && (<div>Loading... </div>)} */}
-            {!user && <SkeletonUser />}
+            {!user && <SkeletonUser theme='dark' />}
 
             <div className="userInfo">
                 <div>
